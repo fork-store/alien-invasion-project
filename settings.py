@@ -1,6 +1,8 @@
 """
 Settings Class
 """
+
+
 class Settings:
     """
     A class to store all settings for Alien Invasion.
@@ -17,7 +19,6 @@ class Settings:
 
         # Ship settings
         self.ship_speed = 1.5
-
 
         # Bullet settings
         self.bullet_speed = 2.0
