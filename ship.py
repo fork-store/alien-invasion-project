@@ -1,5 +1,6 @@
 import pygame
 
+
 class Ship:
     """
     A class to manage the ship
@@ -15,7 +16,7 @@ class Ship:
 
         # Load the ship image and get its rect.
 
-        self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load("images/ship.bmp")
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom centre of the screen.
@@ -27,7 +28,7 @@ class Ship:
         # Movement flags; start with a ship that's not moving.
         self.moving_right = False
         self.moving_left = False
-    
+
     def update(self):
         """
         Update the ship's position based on the movement flag
@@ -37,10 +38,10 @@ class Ship:
             self.x += self.settings.ship_speed
         if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.ship_speed
-        
+
         # Update rect object from self.x
         self.rect.x = self.x
-    
+
     def blitme(self):
         """
         Draw the ship at its current location.
